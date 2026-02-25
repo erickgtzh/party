@@ -982,7 +982,17 @@ body::after {
   letter-spacing: .15em;
   color: var(--neon-pink);
   text-shadow: var(--glow-pink);
+  margin-bottom: .5rem;
+}
+
+.footer-ceo {
+  font-family: var(--font);
+  font-size: clamp(14px, 2vw, 20px);
+  letter-spacing: .2em;
+  color: var(--neon-cyan);
+  text-shadow: var(--glow-cyan);
   margin-bottom: .75rem;
+  opacity: .9;
 }
 
 .footer-sub {
