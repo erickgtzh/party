@@ -4,7 +4,7 @@
    Paleta: Magenta neón, Cyan eléctrico, Verde lima, Negro
 ═══════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Russo+One&family=Bebas+Neue&family=Inter:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 :root {
   --neon-pink:   #ff2d78;
@@ -17,10 +17,7 @@
   --darker:      #06060f;
   --white:       #f0f0ff;
 
-  --font-arcade: 'Press Start 2P', monospace;
-  --font-title:  'Russo One', sans-serif;
-  --font-display:'Bebas Neue', sans-serif;
-  --font-body:   'Inter', sans-serif;
+  --font: 'VT323', monospace;
 
   --glow-pink:   0 0 10px #ff2d78, 0 0 30px #ff2d78, 0 0 60px #ff2d78aa;
   --glow-cyan:   0 0 10px #00f5ff, 0 0 30px #00f5ff, 0 0 60px #00f5ffaa;
@@ -34,7 +31,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--black);
   color: var(--white);
-  font-family: var(--font-body);
+  font-family: var(--font);
   overflow-x: hidden;
   position: relative;
 }
@@ -51,8 +48,8 @@ body::before {
     0deg,
     transparent,
     transparent 2px,
-    rgba(0,0,0,.15) 2px,
-    rgba(0,0,0,.15) 4px
+    rgba(0,0,0,.08) 2px,
+    rgba(0,0,0,.08) 4px
   );
   pointer-events: none;
 }
@@ -73,7 +70,7 @@ body::before {
   border-radius: 2px;
   object-fit: cover;
   opacity: 0;
-  filter: blur(2px) brightness(.2) saturate(.4) hue-rotate(20deg);
+  filter: blur(2px) brightness(.55) saturate(.6) hue-rotate(20deg);
   transition: opacity 2s ease;
   pointer-events: none;
   border: 1px solid rgba(0,245,255,.15);
@@ -87,7 +84,7 @@ body::after {
   position: fixed;
   inset: 0;
   z-index: 1;
-  background: radial-gradient(ellipse at center, rgba(8,8,16,.4) 0%, rgba(8,8,16,.88) 100%);
+  background: radial-gradient(ellipse at center, rgba(8,8,16,.15) 0%, rgba(8,8,16,.5) 100%);
   pointer-events: none;
 }
 
@@ -104,8 +101,8 @@ body::after {
 
 .phrase-bubble {
   position: absolute;
-  font-family: var(--font-arcade);
-  font-size: clamp(8px, 1.2vw, 14px);
+  font-family: var(--font);
+  font-size: clamp(16px, 2.5vw, 28px);
   white-space: nowrap;
   pointer-events: none;
   animation: floatUp linear infinite;
@@ -195,7 +192,7 @@ body::after {
   text-align: center;
   padding: 3rem 1.5rem;
   overflow: hidden;
-  background: linear-gradient(180deg, var(--darker) 0%, rgba(13,13,26,0) 60%, var(--black) 100%);
+  background: linear-gradient(180deg, rgba(6,6,15,.75) 0%, rgba(6,6,15,.5) 40%, rgba(8,8,16,.35) 100%);
 }
 
 .hero-inner {
@@ -208,8 +205,8 @@ body::after {
 /* Arcade badge top */
 .hero-badge {
   display: inline-block;
-  font-family: var(--font-arcade);
-  font-size: clamp(8px, 1.5vw, 13px);
+  font-family: var(--font);
+  font-size: clamp(16px, 2.8vw, 26px);
   color: var(--neon-green);
   text-shadow: var(--glow-green);
   border: 2px solid var(--neon-green);
@@ -237,8 +234,8 @@ body::after {
 }
 
 .hero-number {
-  font-family: var(--font-arcade);
-  font-size: clamp(80px, 18vw, 200px);
+  font-family: var(--font);
+  font-size: clamp(120px, 24vw, 280px);
   color: var(--neon-pink);
   text-shadow: var(--glow-pink),
     4px 4px 0 #8b0050,
@@ -260,8 +257,8 @@ body::after {
 }
 
 .hero-anos-top {
-  font-family: var(--font-display);
-  font-size: clamp(28px, 5vw, 60px);
+  font-family: var(--font);
+  font-size: clamp(48px, 8vw, 100px);
   color: var(--neon-cyan);
   text-shadow: var(--glow-cyan);
   letter-spacing: .15em;
@@ -269,8 +266,8 @@ body::after {
 }
 
 .hero-anos-bottom {
-  font-family: var(--font-display);
-  font-size: clamp(40px, 8vw, 100px);
+  font-family: var(--font);
+  font-size: clamp(64px, 12vw, 160px);
   color: var(--white);
   letter-spacing: .08em;
   line-height: .9;
@@ -279,8 +276,8 @@ body::after {
 
 /* NAME */
 .hero-name {
-  font-family: var(--font-title);
-  font-size: clamp(22px, 4vw, 56px);
+  font-family: var(--font);
+  font-size: clamp(38px, 6.5vw, 90px);
   letter-spacing: .2em;
   color: var(--neon-yellow);
   text-shadow: var(--glow-yellow);
@@ -295,8 +292,8 @@ body::after {
   gap: .75rem;
   background: linear-gradient(135deg, var(--neon-pink) 0%, var(--neon-purple) 100%);
   color: var(--white);
-  font-family: var(--font-arcade);
-  font-size: clamp(9px, 1.5vw, 14px);
+  font-family: var(--font);
+  font-size: clamp(18px, 2.8vw, 28px);
   padding: .7rem 1.8rem;
   border-radius: 4px;
   letter-spacing: .1em;
@@ -307,8 +304,8 @@ body::after {
 
 /* DATE */
 .hero-date {
-  font-family: var(--font-display);
-  font-size: clamp(22px, 4vw, 52px);
+  font-family: var(--font);
+  font-size: clamp(22px, 4vw, 48px);
   letter-spacing: .35em;
   color: var(--neon-cyan);
   text-shadow: var(--glow-cyan);
@@ -316,18 +313,85 @@ body::after {
 }
 
 .hero-sub {
-  font-size: clamp(12px, 1.8vw, 16px);
+  font-size: clamp(22px, 3.2vw, 30px);
   color: rgba(240,240,255,.5);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   letter-spacing: .08em;
+}
+
+.hero-info {
+  margin-top: 0;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  justify-items: stretch;
+}
+
+@media (min-width: 500px) {
+  .hero-info {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    max-width: min(900px, 95vw);
+    padding: 0 1.5rem;
+  }
+  .hero-info .info-card:nth-child(1),
+  .hero-info .info-card:nth-child(2),
+  .hero-info .info-card:nth-child(3),
+  .hero-info .info-card:nth-child(4),
+  .hero-info .info-card:nth-child(5) {
+    grid-column: auto;
+  }
+}
+
+.hero-info .info-card {
+  padding: 1rem 1rem;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.hero-info .info-card a,
+.hero-info .info-card p {
+  display: block;
+  text-align: center;
+  max-width: 100%;
+}
+
+.hero-info .info-card h3 {
+  font-size: clamp(16px, 2.5vw, 24px);
+}
+
+.hero-info .info-card p,
+.hero-info .info-card .info-link {
+  font-size: clamp(18px, 2.5vw, 26px);
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.hero-info .info-link {
+  color: var(--neon-green);
+  text-shadow: var(--glow-green);
+}
+
+.hero-info .info-icon {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.hero-info .info-nowrap {
+  white-space: nowrap;
 }
 
 .btn-hero {
   display: inline-block;
   background: transparent;
   color: var(--neon-green);
-  font-family: var(--font-arcade);
-  font-size: clamp(10px, 1.5vw, 14px);
+  font-family: var(--font);
+  font-size: clamp(18px, 2.8vw, 28px);
   letter-spacing: .1em;
   padding: 1rem 2rem;
   border: 2px solid var(--neon-green);
@@ -352,7 +416,7 @@ body::after {
   z-index: 10;
   padding: 5rem 2rem 4rem;
   text-align: center;
-  background: var(--darker);
+  background: transparent;
   border-top: 2px solid var(--neon-cyan);
   border-bottom: 2px solid var(--neon-cyan);
   box-shadow: 0 0 40px rgba(0,245,255,.15) inset;
@@ -362,8 +426,8 @@ body::after {
 .countdown-section::before {
   content: '— MARCADOR OFICIAL —';
   display: block;
-  font-family: var(--font-arcade);
-  font-size: clamp(8px, 1.2vw, 11px);
+  font-family: var(--font);
+  font-size: clamp(16px, 2.5vw, 24px);
   color: var(--neon-cyan);
   text-shadow: var(--glow-cyan);
   letter-spacing: .3em;
@@ -377,8 +441,8 @@ body::after {
 }
 
 .section-label {
-  font-family: var(--font-arcade);
-  font-size: clamp(9px, 1.5vw, 13px);
+  font-family: var(--font);
+  font-size: clamp(18px, 2.8vw, 26px);
   letter-spacing: .3em;
   color: var(--neon-pink);
   text-shadow: var(--glow-pink);
@@ -401,13 +465,13 @@ body::after {
   border: 2px solid var(--neon-cyan);
   border-radius: 6px;
   padding: 1.5rem 1.8rem;
-  min-width: 110px;
+  min-width: 140px;
   box-shadow: var(--glow-cyan), inset 0 0 30px rgba(0,245,255,.06);
 }
 
 .cd-num {
-  font-family: var(--font-arcade);
-  font-size: clamp(32px, 7vw, 80px);
+  font-family: var(--font);
+  font-size: clamp(56px, 11vw, 130px);
   color: var(--neon-cyan);
   line-height: 1;
   text-shadow: var(--glow-cyan);
@@ -415,16 +479,16 @@ body::after {
 }
 
 .cd-label {
-  font-family: var(--font-arcade);
-  font-size: clamp(7px, 1.2vw, 10px);
+  font-family: var(--font);
+  font-size: clamp(14px, 2.2vw, 22px);
   letter-spacing: .15em;
   color: rgba(0,245,255,.6);
   margin-top: .5rem;
 }
 
 .cd-sep {
-  font-family: var(--font-arcade);
-  font-size: clamp(30px, 6vw, 70px);
+  font-family: var(--font);
+  font-size: clamp(52px, 10vw, 120px);
   color: var(--neon-pink);
   line-height: 1;
   text-shadow: var(--glow-pink);
@@ -436,8 +500,8 @@ body::after {
 
 .countdown-msg {
   margin-top: 2rem;
-  font-family: var(--font-arcade);
-  font-size: clamp(8px, 1.3vw, 11px);
+  font-family: var(--font);
+  font-size: clamp(22px, 3.5vw, 36px);
   color: rgba(255,255,255,.4);
   letter-spacing: .08em;
 }
@@ -451,7 +515,7 @@ body::after {
   padding: 5rem 2rem;
   text-align: center;
   overflow: hidden;
-  background: linear-gradient(180deg, var(--black) 0%, #0d001a 50%, var(--black) 100%);
+  background: transparent;
 }
 
 .portero-section .sunburst-inner {
@@ -469,8 +533,8 @@ body::after {
 }
 
 .numero-uno {
-  font-family: var(--font-arcade);
-  font-size: clamp(80px, 20vw, 220px);
+  font-family: var(--font);
+  font-size: clamp(120px, 26vw, 300px);
   color: transparent;
   -webkit-text-stroke: 3px var(--neon-pink);
   text-shadow: none;
@@ -488,8 +552,8 @@ body::after {
 }
 
 .portero-label {
-  font-family: var(--font-display);
-  font-size: clamp(32px, 7vw, 90px);
+  font-family: var(--font);
+  font-size: clamp(56px, 11vw, 150px);
   letter-spacing: .1em;
   color: var(--white);
   text-shadow: 0 0 30px rgba(255,255,255,.2);
@@ -497,8 +561,8 @@ body::after {
 }
 
 .portero-sub {
-  font-family: var(--font-arcade);
-  font-size: clamp(9px, 1.5vw, 13px);
+  font-family: var(--font);
+  font-size: clamp(18px, 2.8vw, 28px);
   color: var(--neon-yellow);
   text-shadow: var(--glow-yellow);
   letter-spacing: .15em;
@@ -513,8 +577,8 @@ body::after {
 }
 
 .chip {
-  font-family: var(--font-arcade);
-  font-size: clamp(8px, 1.2vw, 11px);
+  font-family: var(--font);
+  font-size: clamp(16px, 2.4vw, 24px);
   padding: .6rem 1.2rem;
   border-radius: 4px;
   letter-spacing: .1em;
@@ -532,7 +596,7 @@ body::after {
 .dresscode-section {
   position: relative;
   z-index: 10;
-  background: var(--darker);
+  background: transparent;
   border-top: 3px solid var(--neon-pink);
   border-bottom: 3px solid var(--neon-pink);
   overflow: hidden;
@@ -548,7 +612,7 @@ body::after {
 }
 
 .dresscode-icon {
-  font-size: clamp(40px, 6vw, 70px);
+  font-size: clamp(64px, 10vw, 120px);
   flex-shrink: 0;
   filter: drop-shadow(0 0 15px var(--neon-pink));
   animation: iconFloat 3s ease-in-out infinite;
@@ -562,8 +626,8 @@ body::after {
 }
 
 .dresscode-label {
-  font-family: var(--font-arcade);
-  font-size: clamp(9px, 1.4vw, 13px);
+  font-family: var(--font);
+  font-size: clamp(18px, 2.6vw, 26px);
   letter-spacing: .3em;
   color: var(--neon-pink);
   text-shadow: var(--glow-pink);
@@ -571,8 +635,8 @@ body::after {
 }
 
 .dresscode-title {
-  font-family: var(--font-display);
-  font-size: clamp(40px, 8vw, 100px);
+  font-family: var(--font);
+  font-size: clamp(64px, 12vw, 160px);
   line-height: .9;
   letter-spacing: .04em;
   color: var(--white);
@@ -581,8 +645,8 @@ body::after {
 }
 
 .dresscode-desc {
-  font-family: var(--font-arcade);
-  font-size: clamp(9px, 1.5vw, 14px);
+  font-family: var(--font);
+  font-size: clamp(18px, 2.8vw, 28px);
   color: var(--neon-yellow);
   text-shadow: var(--glow-yellow);
   letter-spacing: .08em;
@@ -592,8 +656,8 @@ body::after {
 .dresscode-ticker {
   background: var(--neon-pink);
   color: var(--black);
-  font-family: var(--font-arcade);
-  font-size: clamp(9px, 1.4vw, 12px);
+  font-family: var(--font);
+  font-size: clamp(18px, 2.6vw, 26px);
   letter-spacing: .12em;
   overflow: hidden;
   white-space: nowrap;
@@ -624,8 +688,8 @@ body::after {
 
 .marquee-inner {
   white-space: nowrap;
-  font-family: var(--font-arcade);
-  font-size: clamp(9px, 1.4vw, 12px);
+  font-family: var(--font);
+  font-size: clamp(18px, 2.6vw, 26px);
   letter-spacing: .1em;
   animation: marquee 25s linear infinite;
   display: inline-block;
@@ -643,16 +707,16 @@ body::after {
   position: relative;
   z-index: 10;
   padding: 6rem 2rem 4rem;
-  background: var(--dark);
+  background: transparent;
 }
 
 .section-header { text-align: center; margin-bottom: 4rem; }
 
 .section-title {
-  font-family: var(--font-display);
-  font-size: clamp(42px, 8vw, 110px);
+  font-family: var(--font);
+  font-size: clamp(24px, 4.5vw, 42px);
+  line-height: 1.35;
   letter-spacing: .04em;
-  line-height: .9;
   color: var(--white);
 }
 
@@ -663,8 +727,8 @@ body::after {
 
 .section-sub {
   margin-top: 1rem;
-  font-family: var(--font-arcade);
-  font-size: clamp(8px, 1.3vw, 11px);
+  font-family: var(--font);
+  font-size: clamp(16px, 2.5vw, 24px);
   color: rgba(240,240,255,.4);
   letter-spacing: .1em;
 }
@@ -734,8 +798,8 @@ body::after {
   right: 0;
   background: linear-gradient(transparent, rgba(0,0,0,.8));
   padding: 2rem .6rem .5rem;
-  font-family: var(--font-arcade);
-  font-size: 8px;
+  font-family: var(--font);
+  font-size: 16px;
   letter-spacing: .08em;
   color: var(--neon-cyan);
   pointer-events: none;
@@ -753,7 +817,7 @@ body::after {
   position: relative;
   z-index: 10;
   padding: 5rem 2rem;
-  background: var(--darker);
+  background: transparent;
   border-top: 2px solid rgba(57,255,20,.3);
 }
 
@@ -767,6 +831,10 @@ body::after {
 
 @media (min-width: 700px) {
   .info-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 500px) {
+  .info-grid.hero-info { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 }
 
 .info-card {
@@ -799,8 +867,8 @@ body::after {
 }
 
 .info-card h3 {
-  font-family: var(--font-arcade);
-  font-size: clamp(8px, 1.3vw, 11px);
+  font-family: var(--font);
+  font-size: clamp(16px, 2.5vw, 24px);
   letter-spacing: .2em;
   color: var(--neon-green);
   text-shadow: var(--glow-green);
@@ -813,7 +881,7 @@ body::after {
 }
 
 .info-card p {
-  font-size: clamp(14px, 2vw, 18px);
+  font-size: clamp(24px, 3.5vw, 36px);
   color: rgba(240,240,255,.8);
   line-height: 1.5;
 }
@@ -821,8 +889,8 @@ body::after {
 .info-link {
   display: inline-block;
   color: var(--neon-pink);
-  font-family: var(--font-arcade);
-  font-size: clamp(9px, 1.3vw, 12px);
+  font-family: var(--font);
+  font-size: clamp(18px, 2.6vw, 26px);
   letter-spacing: .08em;
   text-decoration: none;
   text-shadow: var(--glow-pink);
@@ -870,7 +938,7 @@ body::after {
   background: rgba(0,0,0,.6);
   border: 2px solid var(--neon-cyan);
   color: var(--neon-cyan);
-  font-family: var(--font-arcade);
+  font-family: var(--font);
   cursor: pointer;
   border-radius: 4px;
   width: 50px;
@@ -899,7 +967,7 @@ body::after {
 .footer {
   position: relative;
   z-index: 10;
-  background: var(--darker);
+  background: linear-gradient(180deg, transparent 0%, rgba(6,6,15,.6) 100%);
   padding: 4rem 2rem 3rem;
   text-align: center;
   border-top: 3px solid var(--neon-pink);
@@ -909,8 +977,8 @@ body::after {
 .footer-inner { max-width: 600px; margin: 0 auto; }
 
 .footer-title {
-  font-family: var(--font-arcade);
-  font-size: clamp(11px, 2vw, 18px);
+  font-family: var(--font);
+  font-size: clamp(20px, 3.5vw, 36px);
   letter-spacing: .15em;
   color: var(--neon-pink);
   text-shadow: var(--glow-pink);
@@ -918,16 +986,16 @@ body::after {
 }
 
 .footer-sub {
-  font-family: var(--font-display);
-  font-size: clamp(16px, 3vw, 28px);
+  font-family: var(--font);
+  font-size: clamp(28px, 5vw, 48px);
   color: rgba(240,240,255,.5);
   letter-spacing: .2em;
   margin-bottom: 1rem;
 }
 
 .footer-dresscode {
-  font-family: var(--font-arcade);
-  font-size: clamp(8px, 1.3vw, 12px);
+  font-family: var(--font);
+  font-size: clamp(18px, 2.6vw, 26px);
   color: var(--neon-yellow);
   text-shadow: var(--glow-yellow);
   margin-bottom: 1.5rem;
@@ -939,8 +1007,8 @@ body::after {
   display: inline-block;
   background: transparent;
   color: var(--neon-green);
-  font-family: var(--font-arcade);
-  font-size: clamp(9px, 1.3vw, 13px);
+  font-family: var(--font);
+  font-size: clamp(18px, 2.6vw, 26px);
   letter-spacing: .1em;
   padding: .8rem 1.8rem;
   border: 2px solid var(--neon-green);
