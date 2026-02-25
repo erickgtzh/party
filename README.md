@@ -4,7 +4,7 @@ Sitio web de cumpleaños para los **30 años de Erick Gutiérrez**.
 
 🎂 **7 de Marzo de 2026 · 4:00 PM**  
 👕 **Dresscode:** Playera de fútbol — Es sencillo pero importante  
-📍 [Ubicación](https://www.menti.com/alh5t1ab4m6v)
+📍 [Ubicación](https://maps.app.goo.gl/nm5hryYgkVCv2REfA)
 
 ---
 
