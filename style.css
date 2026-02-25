@@ -312,15 +312,6 @@ body::after {
   margin-bottom: .5rem;
 }
 
-.hero-cup {
-  font-family: var(--font);
-  font-size: clamp(18px, 2.8vw, 28px);
-  letter-spacing: .15em;
-  color: var(--neon-cyan);
-  text-shadow: var(--glow-cyan);
-  margin-bottom: .5rem;
-}
-
 .hero-sub {
   font-size: clamp(22px, 3.2vw, 30px);
   color: rgba(240,240,255,.5);
@@ -447,15 +438,6 @@ body::after {
 @keyframes flickerCyan {
   0%,48%,52%,100% { opacity: 1; }
   50% { opacity: .3; }
-}
-
-.countdown-cup {
-  font-family: var(--font);
-  font-size: clamp(16px, 2.5vw, 24px);
-  letter-spacing: .2em;
-  color: var(--neon-cyan);
-  text-shadow: var(--glow-cyan);
-  margin-bottom: 1rem;
 }
 
 .section-label {
@@ -641,15 +623,6 @@ body::after {
 @keyframes iconFloat {
   0%,100% { transform: translateY(0); }
   50%     { transform: translateY(-10px); }
-}
-
-.dresscode-cup {
-  font-family: var(--font);
-  font-size: clamp(14px, 2vw, 20px);
-  letter-spacing: .2em;
-  color: var(--neon-cyan);
-  text-shadow: var(--glow-cyan);
-  margin-bottom: .5rem;
 }
 
 .dresscode-label {
@@ -1002,15 +975,6 @@ body::after {
 }
 
 .footer-inner { max-width: 600px; margin: 0 auto; }
-
-.footer-title {
-  font-family: var(--font);
-  font-size: clamp(20px, 3.5vw, 36px);
-  letter-spacing: .15em;
-  color: var(--neon-pink);
-  text-shadow: var(--glow-pink);
-  margin-bottom: .5rem;
-}
 
 .footer-sub {
   font-family: var(--font);
