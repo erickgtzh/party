@@ -1012,16 +1012,6 @@ body::after {
   margin-bottom: .5rem;
 }
 
-.footer-ceo {
-  font-family: var(--font);
-  font-size: clamp(14px, 2vw, 20px);
-  letter-spacing: .2em;
-  color: var(--neon-cyan);
-  text-shadow: var(--glow-cyan);
-  margin-bottom: .5rem;
-  opacity: .9;
-}
-
 .footer-name {
   font-family: var(--font);
   font-size: clamp(14px, 2vw, 20px);
