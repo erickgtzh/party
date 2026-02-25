@@ -4,21 +4,23 @@
 
 'use strict';
 
-// ─── 1. IMAGES LIST ───────────────────────────────
 const IMAGES = [
   "images/168335_10150385778815051_6793163_n.jpg",
   "images/18609.jpeg",
-  "images/20180623_111015.jpg",
-  "images/316360265_187187307196420_8695510364665741298_n.jpg",
   "images/8500255D-AFF1-4C4D-A05A-E0E9BE4BCA19.jpg",
+  "images/IMG_3649.jpg",
+  "images/IMG_4409.jpg",
+  "images/IMG_4579.jpg",
   "images/FB_IMG_1518758699630.jpg",
   "images/FB_IMG_1518758776277.jpg",
   "images/FB_IMG_1518758787548.jpg",
   "images/FB_IMG_1526056679174.jpg",
   "images/FB_IMG_1527096576418.jpg",
+  "images/20180623_111015.jpg",
   "images/FB_IMG_1533517205195.jpg",
   "images/FB_IMG_1546536013610.jpg",
   "images/FB_IMG_1546536021157.jpg",
+  "images/IMG_20190526_224221.jpg",
   "images/FB_IMG_1560451738065.jpg",
   "images/FB_IMG_1560633643835.jpg",
   "images/FB_IMG_1570404344491.jpg",
@@ -26,13 +28,6 @@ const IMAGES = [
   "images/FB_IMG_1582782711945.jpg",
   "images/FB_IMG_1582782718313.jpg",
   "images/FB_IMG_1639252423903.jpg",
-  "images/FB_IMG_1746391580446.jpg",
-  "images/FB_IMG_1747496495432.jpg",
-  "images/FB_IMG_1749755056063.jpg",
-  "images/IMG_20190526_224221.jpg",
-  "images/IMG_3649.jpg",
-  "images/IMG_4409.jpg",
-  "images/IMG_4579.jpg",
   "images/PXL_20221009_210719281.jpg",
   "images/PXL_20221121_154201060.jpg",
   "images/PXL_20221123_170225894.PORTRAIT~2.jpg",
@@ -40,65 +35,44 @@ const IMAGES = [
   "images/PXL_20221126_185348858.jpg",
   "images/PXL_20221128_200336134.jpg",
   "images/PXL_20221128_211740213.jpg",
+  "images/316360265_187187307196420_8695510364665741298_n.jpg",
   "images/PXL_20230529_052356090.jpg",
   "images/PXL_20231218_011844390.jpg",
   "images/PXL_20240215_013126953.jpg",
   "images/PXL_20240303_225831637.jpg",
   "images/PXL_20240516_010412058.MP.jpg",
+  "images/FB_IMG_1746391580446.jpg",
+  "images/FB_IMG_1747496495432.jpg",
+  "images/FB_IMG_1749755056063.jpg",
   "images/PXL_20251104_194707471.jpg",
   "images/PXL_20251104_194819805.jpg",
 ];
 
-// ─── 2. FLOATING PHRASES ──────────────────────────
 const PHRASES = [
-  "⚽ GOLAZO",
-  "MUNDIAL 2026",
-  "FIFAS ETERNAS",
-  "ERICK 30",
-  "PLAYERA LISTA",
-  "ESTADIO LLENO",
-  "GOL DE ORO",
-  "CAMPEÓN DE VIDA",
-  "DESDE EL ÁREA",
-  "TIEMPO EXTRA",
-  "ANFIELD ROAD",
-  "ESTADIO AZTECA",
-  "QATAR 2022",
-  "EL MEJOR ONCE",
-  "GOOOOL",
-  "COPA DEL MUNDO",
-  "HAT TRICK",
-  "OFFSIDE",
-  "PENALTI",
-  "TRIBUNA ALTA",
-  "VESTUARIO",
-  "CÉSPED VERDE",
-  "BALÓN DORADO",
-  "30 AÑOS DE GOLES",
-  "PARTIDO HISTÓRICO",
-  "EL 10 DE LA FIESTA",
-  "FIFA MODE",
+  "⚽ GOLAZO", "MUNDIAL 2026", "FIFAS ETERNAS", "COPA DEL MUNDO",
+  "HAT TRICK", "PENALTI", "TRIBUNA ALTA", "BALÓN DORADO",
+  "30 AÑOS DE GOLES", "PARTIDO HISTÓRICO", "FIFA MODE", "ESTADIO LLENO",
+  "CANCHA PROPIA", "TIEMPO EXTRA", "LIGA DE CAMPEONES", "🏆 COPA",
+  "FUTBOL ES VIDA", "TIRO LIBRE", "CAMPEÓN", "SELECCIÓN PERSONAL",
+  "TEMPORADA ÉPICA", "GOOOOL", "PRORROGA", "EL MEJOR ONCE",
+  "DESDE EL ÁREA", "CÉSPED VERDE", "QATAR 2022", "ANFIELD ROAD",
+  "ESTADIO AZTECA", "ÁRBITRO CONTIGO",
+  "🐯 TIGRES UANL", "ARRIBA LOS TIGRES", "FIEL TIGRE", "UNIVERSITARIO",
+  "TIGRES DE MI VIDA", "SIEMPRE TIGRE", "GARRA TIGRE", "FELINO ETERNO",
+  "ESTADIO UNIVERSITARIO", "NORTE BRAVÍO", "TIGRE CAMPEÓN", "RUGIDO FELINO",
+  "🧤 PORTERO #1", "BAJO LOS PALOS", "NADIE LA METE", "MURO IMPOSIBLE",
+  "GUARDAMETA", "EL CAPITÁN DE LA META", "REFLEJOS DE ACERO",
+  "EL #1 DE LA FIESTA", "ARCO CERRADO", "ATAJADA ÉPICA", "MANOS SEGURAS",
+  "80'S NEVER DIE", "GAME OVER", "INSERT COIN", "PLAYER ONE",
+  "HIGH SCORE", "PRESS START", "LEVEL 30 UNLOCKED",
+  "ERICK 30", "PLAYERA LISTA", "EL 10 DE LA FIESTA",
   "TIEMPO REGLAMENTARIO",
-  "ÁRBITRO CONTIGO",
-  "CANCHA PROPIA",
-  "UN TANTO MÁS",
-  "SELECCIÓN PERSONAL",
-  "TEMPORADA ÉPICA",
-  "CAMPEÓN",
-  "PRORROGA",
-  "LIGA DE CAMPEONES",
-  "🏆 COPA",
-  "FUTBOL ES VIDA",
-  "DESDE EL CENTRO",
-  "TIRO LIBRE",
 ];
 
-// ─── 3. UTILITY ───────────────────────────────────
 const rand = (min, max) => Math.random() * (max - min) + min;
 const randInt = (min, max) => Math.floor(rand(min, max));
 const shuffle = arr => [...arr].sort(() => Math.random() - .5);
 
-// ─── 4. BACKGROUND COLLAGE ────────────────────────
 function buildBackgroundCollage() {
   const bg = document.getElementById('collageBg');
   const shuffled = shuffle(IMAGES);
@@ -125,12 +99,10 @@ function buildBackgroundCollage() {
 
     bg.appendChild(img);
 
-    // stagger fade-in
     setTimeout(() => img.classList.add('visible'), i * 120);
   });
 }
 
-// ─── 5. FLOATING PHRASES ──────────────────────────
 function buildFloatingPhrases() {
   const container = document.getElementById('floatingPhrases');
   const phrasePool = shuffle([...PHRASES, ...PHRASES]);
@@ -159,14 +131,12 @@ function buildFloatingPhrases() {
   });
 }
 
-// ─── 6. GALLERY COLLAGE ───────────────────────────
 const galleryImages = [];
 
 function buildGallery() {
   const container = document.getElementById('galleryCollage');
-  const shuffled  = shuffle(IMAGES);
 
-  shuffled.forEach((src, i) => {
+  IMAGES.forEach((src, i) => {
     const item = document.createElement('div');
     item.classList.add('gallery-item');
     item.dataset.index = i;
@@ -190,7 +160,6 @@ function buildGallery() {
   });
 }
 
-// ─── 7. LIGHTBOX ──────────────────────────────────
 let lbIndex = 0;
 
 function openLightbox(index) {
@@ -224,9 +193,7 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft')    lbNavigate(-1);
 });
 
-// ─── 8. COUNTDOWN ─────────────────────────────────
 function updateCountdown() {
-  // 7 de marzo 2026 a las 16:00 (hora CDMX = UTC-6)
   const target = new Date('2026-03-07T16:00:00-06:00');
   const now    = new Date();
   const diff   = target - now;
@@ -249,7 +216,6 @@ function updateCountdown() {
   document.getElementById('cd-secs').textContent  = pad(secs);
 }
 
-// ─── 9. INIT ──────────────────────────────────────
 (function init() {
   buildBackgroundCollage();
   buildFloatingPhrases();

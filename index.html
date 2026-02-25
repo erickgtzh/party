@@ -3,36 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Erick Gutiérrez — 30 Años ⚽</title>
+  <title>Erick Gutiérrez — 30 Años ⚽ #1</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Bebas+Neue&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Russo+One&family=Bebas+Neue&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ══════════════════════════════════════════
-       COLLAGE BACKGROUND — fotos flotantes
-  ══════════════════════════════════════════ -->
+  <!-- ══ COLLAGE BG ══ -->
   <div class="collage-bg" id="collageBg"></div>
 
-  <!-- ══════════════════════════════════════════
-       FLOATING PHRASES
-  ══════════════════════════════════════════ -->
+  <!-- ══ FLOATING PHRASES ══ -->
   <div class="floating-phrases" id="floatingPhrases"></div>
 
   <!-- ══════════════════════════════════════════
-       HERO SECTION
+       HERO
   ══════════════════════════════════════════ -->
   <header class="hero">
+    <div class="sunburst" aria-hidden="true"></div>
     <div class="hero-inner">
-      <div class="hero-tag">⚽ MUNDIAL · FIFAS · FÚTBOL ⚽</div>
-      <h1 class="hero-title">
-        <span class="title-num">30</span>
-        <span class="title-text">AÑOS DE<br>ERICK<br>GUTIÉRREZ</span>
-      </h1>
+
+      <div class="hero-badge">⚽ MUNDIAL · FIFAS · FÚTBOL · TIGRES ⚽</div>
+
+      <div class="hero-number-wrap">
+        <span class="hero-number">30</span>
+        <div class="hero-anos-stack">
+          <span class="hero-anos-top">AÑOS DE</span>
+          <span class="hero-anos-bottom">ERICK<br>GUTIÉRREZ</span>
+        </div>
+      </div>
+
+      <p class="hero-name">EL GUARDAMETA · EL NÚMERO 1</p>
+
+      <div class="hero-portero">
+        🧤 PORTERO · #1 · TIGRES UANL 🐯
+      </div>
+
       <p class="hero-date">7 · MARZO · 2026</p>
       <p class="hero-sub">Desde las 4:00 PM — La fiesta más grande del año</p>
+
       <a href="https://www.menti.com/alh5t1ab4m6v" target="_blank" class="btn-hero">
         📍 VER UBICACIÓN
       </a>
@@ -43,7 +53,7 @@
        COUNTDOWN
   ══════════════════════════════════════════ -->
   <section class="countdown-section">
-    <div class="section-label">⏱ FALTAN</div>
+    <div class="section-label">⏱ TIEMPO AL PITAZO FINAL</div>
     <div class="countdown" id="countdown">
       <div class="cd-block">
         <span class="cd-num" id="cd-days">00</span>
@@ -65,7 +75,47 @@
         <span class="cd-label">SEG</span>
       </div>
     </div>
-    <p class="countdown-msg">Para el partido más importante del año</p>
+    <p class="countdown-msg">Para el partido más importante de los 30 años</p>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       TIGRES SECTION
+  ══════════════════════════════════════════ -->
+  <section class="tigres-section">
+    <div class="tigres-inner">
+      <div class="tigres-emoji-row" aria-hidden="true">🐯 🐯 🐯</div>
+      <h2 class="tigres-title">TIGRES<br><span>UANL</span></h2>
+      <p class="tigres-sub">Desde niño, siempre y para siempre</p>
+      <div class="tigres-chips">
+        <span class="chip chip-gold">🏆 CAMPEÓN TIGRE</span>
+        <span class="chip chip-blue">⚽ UNIVERSITARIO</span>
+        <span class="chip chip-gold">🐯 FIEL HASTA LA MUERTE</span>
+        <span class="chip chip-blue">🦁 ARRIBA LOS TIGRES</span>
+        <span class="chip chip-gold">🏟️ ESTADIO UNIVERSITARIO</span>
+        <span class="chip chip-blue">⭐ TIGRES DE MI VIDA</span>
+      </div>
+      <p class="tigres-grito">¡¡ ARRIBA LOS TIGREEEEES !!</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PORTERO #1 SECTION
+  ══════════════════════════════════════════ -->
+  <section class="portero-section">
+    <div class="portero-inner">
+      <span class="numero-uno">#1</span>
+      <p class="portero-label">BAJO LOS PALOS</p>
+      <p class="portero-sub">🧤 EL GUARDAMETA · EL MÁS IMPORTANTE DEL ONCE 🧤</p>
+      <div class="portero-chips">
+        <span class="chip chip-pink">🧤 GUARDAMETA</span>
+        <span class="chip chip-cyan">🥅 PORTERO #1</span>
+        <span class="chip chip-green">⚡ REFLEJOS DE ACERO</span>
+        <span class="chip chip-yellow">🏆 EL MEJOR DEL ARCO</span>
+        <span class="chip chip-pink">🚫 NADIE LA METE</span>
+        <span class="chip chip-cyan">🧱 MURO IMPOSIBLE</span>
+        <span class="chip chip-green">👑 EL CAPITÁN DE LA META</span>
+      </div>
+    </div>
   </section>
 
   <!-- ══════════════════════════════════════════
@@ -76,32 +126,30 @@
       <div class="dresscode-icon">👕</div>
       <div class="dresscode-content">
         <p class="dresscode-label">DRESSCODE</p>
-        <h2 class="dresscode-title">PLAYERA DE FÚTBOL</h2>
+        <h2 class="dresscode-title">PLAYERA<br>DE FÚTBOL</h2>
         <p class="dresscode-desc">Es sencillo pero importante</p>
       </div>
       <div class="dresscode-icon">⚽</div>
     </div>
     <div class="dresscode-ticker">
-      <span>PLAYERA DE FÚTBOL &nbsp;·&nbsp; ES SENCILLO PERO IMPORTANTE &nbsp;·&nbsp; PLAYERA DE FÚTBOL &nbsp;·&nbsp; ES SENCILLO PERO IMPORTANTE &nbsp;·&nbsp; PLAYERA DE FÚTBOL &nbsp;·&nbsp; ES SENCILLO PERO IMPORTANTE &nbsp;·&nbsp;</span>
+      <span>PLAYERA DE FÚTBOL &nbsp;·&nbsp; ES SENCILLO PERO IMPORTANTE &nbsp;·&nbsp; TIGRES UANL &nbsp;·&nbsp; PORTERO #1 &nbsp;·&nbsp; PLAYERA DE FÚTBOL &nbsp;·&nbsp; ES SENCILLO PERO IMPORTANTE &nbsp;·&nbsp; TIGRES UANL &nbsp;·&nbsp; PORTERO #1 &nbsp;·&nbsp;</span>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════
-       PHRASE BAND
-  ══════════════════════════════════════════ -->
+  <!-- ══ MARQUEE ══ -->
   <div class="marquee-band">
     <div class="marquee-inner">
-      <span>⚽ 30 AÑOS DE GOLES · MUNDIAL MODE · FIFAS ETERNAS · DESDE CUALQUIER ESTADIO · EL MEJOR EQUIPO SON LOS AMIGOS · PLAYERA PUESTA, FIESTA LISTA · UN PARTIDO QUE NUNCA OLVIDARÁS · ERICK GUTIÉRREZ 30 · GOLAZO DE VIDA ⚽ 30 AÑOS DE GOLES · MUNDIAL MODE · FIFAS ETERNAS · DESDE CUALQUIER ESTADIO · EL MEJOR EQUIPO SON LOS AMIGOS · PLAYERA PUESTA, FIESTA LISTA · UN PARTIDO QUE NUNCA OLVIDARÁS · ERICK GUTIÉRREZ 30 · GOLAZO DE VIDA ⚽</span>
+      <span>⚽ 30 AÑOS DE GOLES · PORTERO #1 · TIGRES UANL · MUNDIAL MODE · FIFAS ETERNAS · BAJO LOS PALOS · ARRIBA LOS TIGRES · PLAYERA PUESTA FIESTA LISTA · EL NÚMERO 1 · 80'S NEVER DIE · GOLAZO DE VIDA · ERICK 30 · TIGRES DE MI VIDA 🐯 &nbsp;&nbsp;&nbsp; ⚽ 30 AÑOS DE GOLES · PORTERO #1 · TIGRES UANL · MUNDIAL MODE · FIFAS ETERNAS · BAJO LOS PALOS · ARRIBA LOS TIGRES · PLAYERA PUESTA FIESTA LISTA · EL NÚMERO 1 · 80'S NEVER DIE · GOLAZO DE VIDA · ERICK 30 · TIGRES DE MI VIDA 🐯</span>
     </div>
   </div>
 
   <!-- ══════════════════════════════════════════
-       GALLERY — collage interactivo
+       GALLERY
   ══════════════════════════════════════════ -->
   <section class="gallery-section">
     <div class="section-header">
       <h2 class="section-title">EL ÁLBUM<br><span>DE LOS CAMPEONES</span></h2>
-      <p class="section-sub">30 años, miles de kilómetros, incontables partidos</p>
+      <p class="section-sub">30 años · miles de kilómetros · incontables partidos</p>
     </div>
     <div class="gallery-collage" id="galleryCollage"></div>
   </section>
@@ -112,33 +160,29 @@
   <section class="info-section">
     <div class="info-grid">
       <div class="info-card">
-        <div class="info-icon">📅</div>
+        <span class="info-icon">📅</span>
         <h3>FECHA</h3>
         <p>7 de Marzo<br>de 2026</p>
       </div>
       <div class="info-card">
-        <div class="info-icon">🕓</div>
+        <span class="info-icon">🕓</span>
         <h3>HORA</h3>
         <p>4:00 PM<br>en punto</p>
       </div>
       <div class="info-card highlight">
-        <div class="info-icon">📍</div>
+        <span class="info-icon">📍</span>
         <h3>UBICACIÓN</h3>
-        <a href="https://www.menti.com/alh5t1ab4m6v" target="_blank" class="info-link">
-          Ver en mapa →
-        </a>
+        <a href="https://www.menti.com/alh5t1ab4m6v" target="_blank" class="info-link">Ver en mapa →</a>
       </div>
       <div class="info-card">
-        <div class="info-icon">👕</div>
+        <span class="info-icon">👕</span>
         <h3>DRESSCODE</h3>
         <p>Playera<br>de fútbol</p>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════
-       LIGHTBOX
-  ══════════════════════════════════════════ -->
+  <!-- ══ LIGHTBOX ══ -->
   <div class="lightbox" id="lightbox">
     <button class="lb-close" id="lbClose">✕</button>
     <button class="lb-prev" id="lbPrev">&#8249;</button>
@@ -153,8 +197,9 @@
   ══════════════════════════════════════════ -->
   <footer class="footer">
     <div class="footer-inner">
-      <p class="footer-title">⚽ ERICK GUTIÉRREZ · 30 AÑOS ⚽</p>
-      <p class="footer-sub">7 · Marzo · 2026 — Modo Mundial</p>
+      <p class="footer-tigres">🐯 TIGRES UANL · SIEMPRE TIGRE 🐯</p>
+      <p class="footer-title">⚽ ERICK GUTIÉRREZ · 30 AÑOS · #1 ⚽</p>
+      <p class="footer-sub">7 · MARZO · 2026 — MODO MUNDIAL</p>
       <p class="footer-dresscode">"Es sencillo pero importante: pon tu playera de fútbol"</p>
       <a href="https://www.menti.com/alh5t1ab4m6v" target="_blank" class="footer-link">📍 Ubicación del partido</a>
     </div>
