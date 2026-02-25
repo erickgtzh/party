@@ -1012,14 +1012,6 @@ body::after {
   margin-bottom: .5rem;
 }
 
-.footer-name {
-  font-family: var(--font);
-  font-size: clamp(14px, 2vw, 20px);
-  color: rgba(240,240,255,.6);
-  letter-spacing: .1em;
-  margin-bottom: .75rem;
-}
-
 .footer-sub {
   font-family: var(--font);
   font-size: clamp(28px, 5vw, 48px);
