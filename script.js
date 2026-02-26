@@ -48,6 +48,8 @@ const IMAGES = [
   "images/PXL_20251104_194819805.jpg",
   "images/tenis-90.png",
   "images/erick-infancia.png",
+  "images/lapiedad.png",
+  "images/pericos1.png",
 ];
 
 const PHRASES = [
