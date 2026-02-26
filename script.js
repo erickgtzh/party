@@ -46,6 +46,8 @@ const IMAGES = [
   "images/FB_IMG_1749755056063.jpg",
   "images/PXL_20251104_194707471.jpg",
   "images/PXL_20251104_194819805.jpg",
+  "images/tenis-90.png",
+  "images/erick-infancia.png",
 ];
 
 const PHRASES = [
@@ -212,10 +214,22 @@ function updateCountdown() {
   document.getElementById('cd-secs').textContent  = pad(secs);
 }
 
+function getCopyrightYear() {
+  return new Date().getFullYear();
+}
+
+function renderFooterCopy() {
+  const el = document.getElementById('footerCopy');
+  if (!el) return;
+  const year = getCopyrightYear();
+  el.textContent = `© ${year} Todos los derechos reservados por club de fans de Erick`;
+}
+
 (function init() {
   buildBackgroundCollage();
   buildFloatingPhrases();
   buildGallery();
   updateCountdown();
   setInterval(updateCountdown, 1000);
+  renderFooterCopy();
 })();
