@@ -333,16 +333,9 @@ body::after {
 
 @media (min-width: 500px) {
   .hero-info {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     max-width: min(900px, 95vw);
     padding: 0 1.5rem;
-  }
-  .hero-info .info-card:nth-child(1),
-  .hero-info .info-card:nth-child(2),
-  .hero-info .info-card:nth-child(3),
-  .hero-info .info-card:nth-child(4),
-  .hero-info .info-card:nth-child(5) {
-    grid-column: auto;
   }
 }
 
@@ -892,7 +885,7 @@ body::after {
 }
 
 @media (min-width: 500px) {
-  .info-grid.hero-info { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .info-grid.hero-info { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 .info-card {
